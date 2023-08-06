@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="icon" href="http://localhost:3000/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+  <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+  <link rel="stylesheet" href="./My Form_files/materialize.min.css">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <link href="./My Form_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="./My Form_files/bootstrap.min(1).css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>React App</title>
+<script defer="" src="./My Form_files/bundle.js.download"></script><style>*{
+    background-color: rgb(14, 54, 27);
+}
+.myForm{
+    width: 300px;
+    height: 420px;
+    position: relative;
+    margin: auto;
+    /* border: 2px solid black; */
+}
+.my-Input{
+    background-color: black;
+color: white;
+}
+::placeholder{
+    text-align: center;
+}
+.Error-message{
+    color: red;
+}
+.Submit-btn{
+    margin-left: 120px;
+    background-color: aquamarine;
+}
+.Submit-btn:hover{
+    
+    background-color: green;
+    transition: 0.6s all;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.myTable{
+    width: 1000px;
+    position: relative;
+    margin: auto;
+    color: wheat;
+}
+.Thead{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Edit-btn{
+    background-color: green;
+    color: white;  
+    cursor: pointer;  
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Edit-btn:hover{
+    transition: 0.6s all;
+
+    font-size: 20px;
+}
+.Delete-btn{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Delete-btn:hover{
+    transition: 0.6s all;
+    font-size: 20px;
+}
+.user-Data{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Gb3JtIFByYWN0aWNlIEJ5IFVzbWFuIEdoYW5pL0NGb3JtLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlDQUFpQztBQUNyQztBQUNBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLDZCQUE2QjtBQUNqQztBQUNBO0lBQ0ksdUJBQXVCO0FBQzNCLFlBQVk7QUFDWjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxVQUFVO0FBQ2Q7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQiw0QkFBNEI7QUFDaEM7QUFDQTs7SUFFSSx1QkFBdUI7SUFDdkIsb0JBQW9CO0lBQ3BCLGVBQWU7SUFDZixlQUFlOztBQUVuQjtBQUNBO0lBQ0ksYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osWUFBWTtBQUNoQjtBQUNBO0lBQ0ksWUFBWTtJQUNaLHFFQUFxRTtBQUN6RTtBQUNBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixlQUFlO0lBQ2Ysc0VBQXNFO0FBQzFFO0FBQ0E7SUFDSSxvQkFBb0I7O0lBRXBCLGVBQWU7QUFDbkI7QUFDQTtJQUNJLHFCQUFxQjtJQUNyQixZQUFZO0lBQ1osZUFBZTtJQUNmLHNFQUFzRTtBQUMxRTtBQUNBO0lBQ0ksb0JBQW9CO0lBQ3BCLGVBQWU7QUFDbkI7QUFDQTtJQUNJLCtDQUErQztBQUNuRCIsInNvdXJjZXNDb250ZW50IjpbIip7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTQsIDU0LCAyNyk7XHJcbn1cclxuLm15Rm9ybXtcclxuICAgIHdpZHRoOiAzMDBweDtcclxuICAgIGhlaWdodDogNDIwcHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICAvKiBib3JkZXI6IDJweCBzb2xpZCBibGFjazsgKi9cclxufVxyXG4ubXktSW5wdXR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuY29sb3I6IHdoaXRlO1xyXG59XHJcbjo6cGxhY2Vob2xkZXJ7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLkVycm9yLW1lc3NhZ2V7XHJcbiAgICBjb2xvcjogcmVkO1xyXG59XHJcbi5TdWJtaXQtYnRue1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEyMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYXF1YW1hcmluZTtcclxufVxyXG4uU3VibWl0LWJ0bjpob3ZlcntcclxuICAgIFxyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47XHJcbiAgICB0cmFuc2l0aW9uOiAwLjZzIGFsbDtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIFxyXG59XHJcbi5teVRhYmxle1xyXG4gICAgd2lkdGg6IDEwMDBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIGNvbG9yOiB3aGVhdDtcclxufVxyXG4uVGhlYWR7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LWZhbWlseTpDYW1icmlhLCBDb2NoaW4sIEdlb3JnaWEsIFRpbWVzLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWY7XHJcbn1cclxuLkVkaXQtYnRue1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47XHJcbiAgICBjb2xvcjogd2hpdGU7ICBcclxuICAgIGN1cnNvcjogcG9pbnRlcjsgIFxyXG4gICAgZm9udC1mYW1pbHk6IEltcGFjdCwgSGFldHRlbnNjaHdlaWxlciwgJ0FyaWFsIE5hcnJvdyBCb2xkJywgc2Fucy1zZXJpZjtcclxufVxyXG4uRWRpdC1idG46aG92ZXJ7XHJcbiAgICB0cmFuc2l0aW9uOiAwLjZzIGFsbDtcclxuXHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuLkRlbGV0ZS1idG57XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBmb250LWZhbWlseTogSW1wYWN0LCBIYWV0dGVuc2Nod2VpbGVyLCAnQXJpYWwgTmFycm93IEJvbGQnLCBzYW5zLXNlcmlmO1xyXG59XHJcbi5EZWxldGUtYnRuOmhvdmVye1xyXG4gICAgdHJhbnNpdGlvbjogMC42cyBhbGw7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbn1cclxuLnVzZXItRGF0YXtcclxuICAgIGZvbnQtZmFtaWx5OlZlcmRhbmEsIEdlbmV2YSwgVGFob21hLCBzYW5zLXNlcmlmO1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.Containner{
+    height: 300px;
+    width: 300px;
+    /* border:2px solid black; */
+    display:grid;
+    grid-template: 
+   "Red Green"
+   "Blue Yellow";
+   position: relative;
+   margin: auto;
+   margin-top: 170px;
+}
+.Red{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 1rem ;
+}
+.Green{
+    height: 100px;
+    width: 100px;
+    background-color: Green;
+    font-size: 20px;
+    border-radius: 1rem ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}.Blue{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    font-size: 20px;
+    border-radius: 1rem ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}.Yellow{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(247, 211, 8);
+    font-size: 20px;
+    border-radius: 1rem ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Gb3JtIFByYWN0aWNlIEJ5IFVzbWFuIEdoYW5pL3NvdW5kcGxheUNTUy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLDRCQUE0QjtJQUM1QixZQUFZO0lBQ1o7O2dCQUVZO0dBQ2Isa0JBQWtCO0dBQ2xCLFlBQVk7R0FDWixpQkFBaUI7QUFDcEI7QUFDQTtJQUNJLGFBQWE7SUFDYixZQUFZO0lBQ1oscUJBQXFCO0lBQ3JCLGVBQWU7SUFDZixzRUFBc0U7SUFDdEUsb0JBQW9CO0FBQ3hCO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixlQUFlO0lBQ2Ysb0JBQW9CO0lBQ3BCLHNFQUFzRTtBQUMxRSxDQUFDO0lBQ0csYUFBYTtJQUNiLFlBQVk7SUFDWixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLG9CQUFvQjtJQUNwQixzRUFBc0U7QUFDMUUsQ0FBQztJQUNHLGFBQWE7SUFDYixZQUFZO0lBQ1osa0NBQWtDO0lBQ2xDLGVBQWU7SUFDZixvQkFBb0I7SUFDcEIsc0VBQXNFO0FBQzFFIiwic291cmNlc0NvbnRlbnQiOlsiLkNvbnRhaW5uZXJ7XHJcbiAgICBoZWlnaHQ6IDMwMHB4O1xyXG4gICAgd2lkdGg6IDMwMHB4O1xyXG4gICAgLyogYm9yZGVyOjJweCBzb2xpZCBibGFjazsgKi9cclxuICAgIGRpc3BsYXk6Z3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGU6IFxyXG4gICBcIlJlZCBHcmVlblwiXHJcbiAgIFwiQmx1ZSBZZWxsb3dcIjtcclxuICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICBtYXJnaW46IGF1dG87XHJcbiAgIG1hcmdpbi10b3A6IDE3MHB4O1xyXG59XHJcbi5SZWR7XHJcbiAgICBoZWlnaHQ6IDEwMHB4O1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xyXG4gICAgZm9udC1zaXplOiAyMHB4O1xyXG4gICAgZm9udC1mYW1pbHk6IEltcGFjdCwgSGFldHRlbnNjaHdlaWxlciwgJ0FyaWFsIE5hcnJvdyBCb2xkJywgc2Fucy1zZXJpZjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDFyZW0gO1xyXG59XHJcbi5HcmVlbntcclxuICAgIGhlaWdodDogMTAwcHg7XHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBHcmVlbjtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDFyZW0gO1xyXG4gICAgZm9udC1mYW1pbHk6IEltcGFjdCwgSGFldHRlbnNjaHdlaWxlciwgJ0FyaWFsIE5hcnJvdyBCb2xkJywgc2Fucy1zZXJpZjtcclxufS5CbHVle1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsdWU7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxcmVtIDtcclxuICAgIGZvbnQtZmFtaWx5OiBJbXBhY3QsIEhhZXR0ZW5zY2h3ZWlsZXIsICdBcmlhbCBOYXJyb3cgQm9sZCcsIHNhbnMtc2VyaWY7XHJcbn0uWWVsbG93e1xyXG4gICAgaGVpZ2h0OiAxMDBweDtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNDcsIDIxMSwgOCk7XHJcbiAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxcmVtIDtcclxuICAgIGZvbnQtZmFtaWx5OiBJbXBhY3QsIEhhZXR0ZW5zY2h3ZWlsZXIsICdBcmlhbCBOYXJyb3cgQm9sZCcsIHNhbnMtc2VyaWY7XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><form class="myForm"><input class="my-Input" type="text" placeholder="FName" name="fname" value=""><span class="Error-message"></span><input class="my-Input" type="text" placeholder="LName" name="lname" value=""><span class="Error-message"></span><input class="my-Input" type="email" placeholder="Email" name="email" value=""><span class="Error-message"></span><input class="my-Input" type="password" placeholder="Password" name="password" value=""><span class="Error-message"></span><input class="my-Input" type="number" placeholder="Contact No" name="contactNo" value=""><span class="Error-message"></span><br><button class="Submit-btn">Submit</button></form><table class="myTable"><thead class="Thead"><tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Password</th><th>Contact No</th><th>Update</th><th>Delete</th></tr></thead><tbody class="Tbody"></tbody></table></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+  <script src="./My Form_files/bootstrap.bundle.min.js.download" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+</body></html>
